@@ -1,0 +1,31 @@
+Features - Tour Testing:
+
+Submenu - Students:
+1. Add STUDENT - working as expected 
+2. Delete STUDENT - working as expected
+3. Search STUDENT - working as expected
+4. Update STUDENT
+	- can update a student that does not exist and prints on the screen "Student updated successfully!"; however, if list students command is called next
+	the 'modified' student does not exist 
+	- After introducing a new student in the database, the error “Student does not exist!” appears when trying to update it, 
+	even though on printing all the students the newly added one is present.
+5. List STUDENTS - working as expected
+
+
+Submenu - Assignments:
+1. Add ASSIGNMENT - working as expected
+2. Extend deadline - not working as expected, because getCurrentWeek function establishes the current week by reading from an input file the start date(which in our case is incorrect);
+		   - not updating the deadline due to this error
+3. Delete ASSIGNMENT - working as expected
+4. Search ASSIGNMENT - working as expected
+5. Update ASSIGNMENT - not working as expected, displays "Assignment does not exist!" even if the input data is correct
+		     - correctly updates the assignment because when using command print all assignments the modifications have been done 
+6. List ASSIGNMENTS - working as expected
+
+
+Sumbmenu - Grades:
+1. Add GRADE - not working as expected; user cannot add new grade - the only error displayed being "Student can no longer turn in this paper!"
+	     - crashes when date format is erroneous 
+2. Delete GRADE - working as expected
+3. Search GRADE - not working as expected; it does not display the grade with correct input (that is also available in the input file)
+4. List GRADES - working as expected
