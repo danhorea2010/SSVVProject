@@ -189,4 +189,21 @@ public class TestClass {
         }
     }
 
+    @Test
+    public void addStudent_LowerBoundGroupNr_ThrowError() {
+        String idStudent = "test5";
+        String numeStudent = "john";
+        int grupa = 0;
+        String email = null;
+        Student student = new Student(idStudent, numeStudent, grupa, email);
+
+        try {
+            service.addStudent(student);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println(exception);
+            assert(true);
+        }
+    }
+
 }
