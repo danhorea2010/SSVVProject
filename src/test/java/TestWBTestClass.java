@@ -61,7 +61,7 @@ public class TestWBTestClass {
     @Test
     public void addTema_InValidData_CreatedSuccessfully() {
 
-        String nrTema = "";
+        String nrTema = null;
         String descriere = "Assignment for testing";
         int deadline = 12;
         int primire = 2;
