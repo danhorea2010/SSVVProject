@@ -59,7 +59,7 @@ public class TestWBTestClass {
     }
 
     @Test
-    public void addTema_InValidData_CreatedSuccessfully() {
+    public void addTema_InValidData_ThrowsError() {
 
         String nrTema = null;
         String descriere = "Assignment for testing";
