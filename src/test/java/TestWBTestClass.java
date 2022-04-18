@@ -39,10 +39,10 @@ public class TestWBTestClass {
     @Test
     public void addTema_ValidData_CreatedSuccessfully() {
 
-        String nrTema = "Test Assignemnt";
-        String descriere = "Assignment for testing";
+        String nrTema = "100";
+        String descriere = "test";
         int deadline = 12;
-        int primire = 2;
+        int primire = 1;
 
         Tema tema = new Tema(nrTema, descriere, deadline, primire );
 
@@ -59,10 +59,10 @@ public class TestWBTestClass {
     }
 
     @Test
-    public void addTema_InValidData_ThrowsError() {
+    public void addTema_Invalid_nrTema_ThrowsError() {
 
         String nrTema = null;
-        String descriere = "Assignment for testing";
+        String descriere = "test";
         int deadline = 12;
         int primire = 2;
 
@@ -79,6 +79,77 @@ public class TestWBTestClass {
         }
 
     }
+
+    @Test
+    public void addTema_Invalid_descriere_ThrowsError() {
+
+        String nrTema = "101";
+        String descriere = "";
+        int deadline = 12;
+        int primire = 2;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_deadline_ThrowsError() {
+
+        String nrTema = "102";
+        String descriere = "test";
+        int deadline = 0;
+        int primire = 11;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+    @Test
+    public void addTema_Invalid_primire_ThrowsError() {
+
+        String nrTema = "103";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 15;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
+    }
+
+
+
+
+
 
 
 
