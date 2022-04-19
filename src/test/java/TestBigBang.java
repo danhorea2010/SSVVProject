@@ -110,8 +110,6 @@ public class TestBigBang {
 
         Nota notaObj = new Nota(id, idStudentt, idTema, nota, date);
 
-
-
         try{
 
             service.addTema(tema);
@@ -125,6 +123,36 @@ public class TestBigBang {
 
 
     }
+
+    @Test
+    public void addNota_isolated_ValidData_CreatedSuccessfully() {
+
+
+        String id = "999";
+        String idStudentt = "999";
+        String idTema = "999";
+        double nota = 5;
+
+        String newnewDate = "2023,11,1";
+        String[] words = newnewDate.split(",");
+
+        LocalDate date = LocalDate.of(Integer.parseInt(words[0]),Integer.parseInt(words[1]),Integer.parseInt(words[2]) );
+
+        Nota notaObj = new Nota(id, idStudentt, idTema, nota, date);
+
+        try{
+            service.addNota(notaObj, "feedback");
+            assert(true);
+        }catch (ValidationException e){
+            e.printStackTrace();
+            assert(false);
+        }
+
+
+    }
+
+
+
 
 
 
