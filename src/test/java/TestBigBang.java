@@ -78,11 +78,6 @@ public class TestBigBang {
 
     @Test
     public void addNota_bigbang_ValidData_CreatedSuccessfully() {
-//        private String id;
-//        private String idStudent;
-//        private String idTema;
-//        private double nota;
-//        private LocalDate data;
 
         String idStudent = "999";
         String numeStudentt = "john";
@@ -127,6 +122,14 @@ public class TestBigBang {
     @Test
     public void addNota_isolated_ValidData_CreatedSuccessfully() {
 
+
+        String idStudent = "999";
+        String numeStudentt = "john";
+        int grupa = 934;
+        String email = "john_doe@yahoo.com";
+        Student student = new Student(idStudent, numeStudentt, grupa, email);
+
+        service.addStudent(student);
 
         String id = "999";
         String idStudentt = "999";

@@ -166,26 +166,31 @@ public class Service {
         int predare = calculeazaSPredare(nota.getData());
 
 
-        if(predare != tema.getDeadline()){
-            if (predare-tema.getDeadline() == 1){
-                nota.setNota(nota.getNota()-2.5);
+        if(predare >= tema.getDeadline()) {
+            if (predare != tema.getDeadline()) {
+                if (predare - tema.getDeadline() == 1) {
+                    nota.setNota(nota.getNota() - 2.5);
 
-            }
-            else{
-                throw new ValidationException("Studentul nu mai poate preda aceasta tema!");
+                } else {
+                    throw new ValidationException("Studentul nu mai poate preda aceasta tema!");
+                }
             }
         }
-        notaFileRepository.save(nota);
-        String filename = "fisiere/" + student.getNume() + ".txt";
-        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename, true))){
-            bufferedWriter.write("\nTema: " + tema.getID());
-            bufferedWriter.write("\nNota: " + nota.getNota());
-            bufferedWriter.write("\nPredata in saptamana: " + predare);
-            bufferedWriter.write("\nDeadline: " + tema.getDeadline());
-            bufferedWriter.write("\nFeedback: " +feedback);
-            bufferedWriter.newLine();
-        } catch (IOException exception){
-            throw new ValidationException(exception.getMessage());
+
+        Nota inRepoGrade = notaFileRepository.save(nota);
+        System.out.println(inRepoGrade);
+        if(inRepoGrade == null) {
+            String filename = "fisiere/" + student.getNume() + ".txt";
+            try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename, true))) {
+                bufferedWriter.write("\nTema: " + tema.getID());
+                bufferedWriter.write("\nNota: " + nota.getNota());
+                bufferedWriter.write("\nPredata in saptamana: " + predare);
+                bufferedWriter.write("\nDeadline: " + tema.getDeadline());
+                bufferedWriter.write("\nFeedback: " + feedback);
+                bufferedWriter.newLine();
+            } catch (IOException exception) {
+                throw new ValidationException(exception.getMessage());
+            }
         }
         return nota.getNota();
     }
