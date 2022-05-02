@@ -1,6 +1,7 @@
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import repository.NotaXMLRepo;
@@ -30,23 +31,24 @@ public class TestTopDown {
         TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
+
         TestTopDown.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+    }
+
+    @AfterAll
+    public static void teardown(){
+        service.deleteStudent("999");
+        service.deleteTema("999");
+        service.deleteNota("999");
     }
 
 
     @Test
     public void addStudent_topdown_ValidData_CreatedSuccessfully(){
-        /// ...
-
-        String nrTema = "999";
-        String descriere = "test";
-        int deadline = 12;
-        int primire = 1;
-
-        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+        Student student = new Student("999", "john", 934, "john_doe@yahoo.com");
 
         try{
-            service.addTema(tema);
+            service.addStudent(student);
             assert(true);
 
         }catch (ValidationException ve){
@@ -62,13 +64,7 @@ public class TestTopDown {
     public void addTema_topdown_ValidData_CreatedSuccessfully(){
         /// addStudent + addTema
         this.addStudent_topdown_ValidData_CreatedSuccessfully();
-
-        String nrTema = "999";
-        String descriere = "test";
-        int deadline = 12;
-        int primire = 1;
-
-        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+        Tema tema = new Tema("999", "test", 5, 1 );
 
         try{
             service.addTema(tema);
@@ -88,47 +84,19 @@ public class TestTopDown {
 
         this.addStudent_topdown_ValidData_CreatedSuccessfully();
         this.addTema_topdown_ValidData_CreatedSuccessfully();
-
-
-        String idStudent = "999";
-        String numeStudentt = "john";
-        int grupa = 934;
-        String email = "john_doe@yahoo.com";
-        Student student = new Student(idStudent, numeStudentt, grupa, email);
-
-        String nrTema = "999";
-        String descriere = "test";
-        int deadline = 6;
-        int primire = 1;
-
-        Tema tema = new Tema(nrTema, descriere, deadline, primire );
-
-
-        String id = "999";
-        String idStudentt = "999";
-        String idTema = "999";
-        double nota = 5;
-
-        String newnewDate = "2023,11,1";
-        String[] words = newnewDate.split(",");
-
+        String[] words =  "2023,11,1".split(",");
         LocalDate date = LocalDate.of(Integer.parseInt(words[0]),Integer.parseInt(words[1]),Integer.parseInt(words[2]) );
-
-        Nota notaObj = new Nota(id, idStudentt, idTema, nota, date);
+        Nota notaObj = new Nota("999", "999", "999", 5, date);
 
         try{
-
-            service.addTema(tema);
-            service.addStudent(student);
             service.addNota(notaObj, "feedback");
             assert(true);
         }catch (ValidationException e){
             e.printStackTrace();
             assert(false);
         }
-
-
-
     }
+
+
 
 }
