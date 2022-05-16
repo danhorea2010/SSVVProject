@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="org.example.features.search.KeyboardSearcherDdt" skipped="0" tests="4" time="54.35" timestamp="2022-05-16 03:50:19"><testcase classname="org.example.features.search.KeyboardSearcherDdt" name="Search for keyboards"><failure message="&#10;Expected: a collection containing a string containing &quot;msi vigor gk50 elite&quot;&#10;     but: was &quot;msi vigor gk50 low profile us s11-04us254-ga7&#10;în stoc&#10;443,99 lei&#10;adauga in cos&quot;" type="java.lang.AssertionError">
-Expected: a collection containing a string containing "msi vigor gk50 elite"
-     but: was "msi vigor gk50 low profile us s11-04us254-ga7
-în stoc
-443,99 lei
-adauga in cos"</failure><system-err>
-Expected: a collection containing a string containing "msi vigor gk50 elite"
-     but: was "msi vigor gk50 low profile us s11-04us254-ga7
-în stoc
-443,99 lei
-adauga in cos"
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="org.example.features.search.KeyboardSearcherDdt" skipped="0" tests="4" time="45.76" timestamp="2022-05-16 04:35:31"><testcase classname="org.example.features.search.KeyboardSearcherDdt" name="Search for keyboards"><failure message="&#10;Expected: a collection containing a string containing &quot;Invalid keyboard&quot;&#10;     but: " type="java.lang.AssertionError">
+Expected: a collection containing a string containing "Invalid keyboard"
+     but: </failure><system-err>
+Expected: a collection containing a string containing "Invalid keyboard"
+     but: 
 org.example.steps.serenity.EmagUserSteps.should_see_product_name(EmagUserSteps.java:44)
 org.example.features.search.KeyboardSearcherDdt.searchForKeyboards(KeyboardSearcherDdt.java:41)
 </system-err></testcase></testsuite>

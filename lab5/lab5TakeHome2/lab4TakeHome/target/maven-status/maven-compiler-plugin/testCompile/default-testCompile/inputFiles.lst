@@ -1,4 +1,9 @@
-/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome/lab4TakeHome/src/test/java/org/example/features/search/package-info.java
-/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome/lab4TakeHome/src/test/java/org/example/pages/DictionaryPage.java
-/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome/lab4TakeHome/src/test/java/org/example/features/search/SearchByKeywordStory.java
-/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome/lab4TakeHome/src/test/java/org/example/steps/serenity/EndUserSteps.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/features/search/KeyboardSearcherPlusFilterDdt.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/steps/serenity/EndUserSteps.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/features/search/package-info.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/steps/serenity/EmagUserSteps.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/pages/DictionaryPage.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/features/search/SearchByKeywordStoryDdt.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/pages/EmagPage.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/features/search/KeyboardSearcherDdt.java
+/home/dan/Desktop/ssvv/SSVVProject/lab5/lab5TakeHome2/lab4TakeHome/src/test/java/org/example/features/search/SearchByKeywordStory.java

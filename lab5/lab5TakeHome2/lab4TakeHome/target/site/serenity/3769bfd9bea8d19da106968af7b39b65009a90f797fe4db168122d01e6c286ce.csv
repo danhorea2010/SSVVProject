@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Search by keyword story","Searching by keyword banana should display the corresponding article","SUCCESS","2022-05-16T14:18:26.734349+03:00[Europe/Bucharest]","0.0","15.36"
-"Search by keyword story","Searching by keyword apple should display the corresponding article","SUCCESS","2022-05-16T14:18:42.700774+03:00[Europe/Bucharest]","0.0","4.47"
+"Search by keyword story","Searching by keyword banana should display the corresponding article","SUCCESS","2022-05-16T16:46:24.548811+03:00[Europe/Bucharest]","0.0","8.48"
+"Search by keyword story","Searching by keyword apple should display the corresponding article","SUCCESS","2022-05-16T16:46:33.062625+03:00[Europe/Bucharest]","0.0","4.47"
