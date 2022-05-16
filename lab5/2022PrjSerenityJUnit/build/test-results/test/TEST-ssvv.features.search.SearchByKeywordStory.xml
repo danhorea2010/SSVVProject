@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ssvv.features.search.SearchByKeywordStory" tests="3" skipped="1" failures="2" errors="0" timestamp="2022-05-16T10:11:12" hostname="dan-20fcs4kb00" time="16.549">
+  <properties/>
+  <testcase name="searching_by_keyword_banana_should_display_the_corresponding_article" classname="ssvv.features.search.SearchByKeywordStory" time="14.847">
+    <failure message="net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.&#10;  (unknown error: DevToolsActivePort file doesn't exist)&#10;  (The process started from chrome location /opt/google/chrome/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'dan-20fcs4kb00', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.38-1-MANJARO', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {acceptInsecureCerts: false, autodownload: true, browserName: chrome, driver: chrome, goog:chromeOptions: {args: [], extensions: []}}}]). See below for more details." type="net.thucydides.core.webdriver.DriverConfigurationError">net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'dan-20fcs4kb00', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.38-1-MANJARO', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {acceptInsecureCerts: false, autodownload: true, browserName: chrome, driver: chrome, goog:chromeOptions: {args: [], extensions: []}}}]). See below for more details.
+	at app//ssvv.steps.serenity.EndUserSteps.is_the_home_page(EndUserSteps.java:32)
+	at app//ssvv.features.search.SearchByKeywordStory.searching_by_keyword_banana_should_display_the_corresponding_article(SearchByKeywordStory.java:35)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="searching_by_ambiguious_keyword_should_display_the_disambiguation_page" classname="ssvv.features.search.SearchByKeywordStory" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase name="searching_by_keyword_apple_should_display_the_corresponding_article" classname="ssvv.features.search.SearchByKeywordStory" time="1.134">
+    <failure message="net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.&#10;  (unknown error: DevToolsActivePort file doesn't exist)&#10;  (The process started from chrome location /opt/google/chrome/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'dan-20fcs4kb00', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.38-1-MANJARO', java.version: '11.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {acceptInsecureCerts: false, autodownload: true, browserName: chrome, driver: chrome, goog:chromeOptions: {args: [], extensions: []}}}]). See below for more details." type="net.thucydides.core.webdriver.DriverConfigurationError">net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'dan-20fcs4kb00', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.38-1-MANJARO', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {acceptInsecureCerts: false, autodownload: true, browserName: chrome, driver: chrome, goog:chromeOptions: {args: [], extensions: []}}}]). See below for more details.
+	at app//ssvv.steps.serenity.EndUserSteps.is_the_home_page(EndUserSteps.java:32)
+	at app//ssvv.features.search.SearchByKeywordStory.searching_by_keyword_apple_should_display_the_corresponding_article(SearchByKeywordStory.java:27)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 44676
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 34100
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+</testsuite>

@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.3.2</serenity.version>
+        <serenity.version>3.2.5</serenity.version>
     </properties>
 
     <repositories>
@@ -24,6 +24,11 @@
         <name>bintray</name>
         <url>https://jcenter.bintray.com</url>
       </repository>
+        <repository>
+            <id>maven_central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
     </repositories>
     <pluginRepositories>
       <pluginRepository>
@@ -36,6 +41,7 @@
       </pluginRepository>
     </pluginRepositories>
 
+
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -46,7 +52,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
+            <version>1.7.36</version>
             <scope>test</scope>
         </dependency>
         <dependency>
