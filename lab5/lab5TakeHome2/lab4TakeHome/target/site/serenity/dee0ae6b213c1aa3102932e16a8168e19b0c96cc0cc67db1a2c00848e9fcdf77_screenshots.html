@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo Project using Serenity and JUnit</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="24ce589f5b1fdc8d9928f73b1337f2ad80dae4b5aa7a2c359907c59afff4b832.html">Keyboard Searcher Ddt</a></span>
+                > <span class="truncate-60"><a
+                    href="dee0ae6b213c1aa3102932e16a8168e19b0c96cc0cc67db1a2c00848e9fcdf77.html">Search for keyboards </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 16-05-2022 15:50</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Keyboard Searcher Ddt </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Search for keyboards
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Is the home page<br>Looks for: &lt;Name&gt;<br>Filter in stock<br>Should see product name: &lt;Name&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: a collection containing a string containing 'msi vigor gk50 elite' but: was 'msi vigor gk50 low profile us s11-04us254-ga7&icirc;n stoc443,99 leiadauga in cos'</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>org.example.steps.serenity.EmagUserSteps.should_see_product_name(EmagUserSteps.java:44)<br />org.example.features.search.KeyboardSearcherDdt.searchForKeyboards(KeyboardSearcherDdt.java:41)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource3387889865295166682.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6f1c68c73dd0ffee441a0981385bd1ace2333200db1a352a5362ecc5811c2cbe.png" title=" Search for keyboards keychron k2" width="1280"/>
+                <img src="6f1c68c73dd0ffee441a0981385bd1ace2333200db1a352a5362ecc5811c2cbe.png" title=" Is the home page" width="1280"/>
+                <img src="a99b71e0b1b3f912f08897397b1ce1037afae1ea9560fc5d7c911fbf7cc804c9.png" title=" Looks for: keychron k2" width="1280"/>
+                <img src="a99b71e0b1b3f912f08897397b1ce1037afae1ea9560fc5d7c911fbf7cc804c9.png" title=" Enters: keychron k2" width="1280"/>
+                <img src="a99b71e0b1b3f912f08897397b1ce1037afae1ea9560fc5d7c911fbf7cc804c9.png" title=" Starts search" width="1280"/>
+                <img src="024816ab8653900dff02396502f473941140eef6375842fdf0f4d4e854e4bfeb.png" title=" Starts search (completed)" width="1280"/>
+                <img src="024816ab8653900dff02396502f473941140eef6375842fdf0f4d4e854e4bfeb.png" title=" Looks for: keychron k2 (completed)" width="1280"/>
+                <img src="dfbcf70bf30e5beaf4156aaab3a820110430848fb52cfa09f4326af9ccae2fba.png" title=" Filter in stock" width="1280"/>
+                <img src="792f9bba5468408985761173277ff3287686e38f5d02c31078f9c6a0a7d92bc8.png" title=" Should see product name: keychron k2" width="1280"/>
+                <img src="eeb76f8b5d8011d8b33e53aca24f0b6e73e1976f4f3d330e2d0e61bfe9048374.png" title=" Search for keyboards hyperx alloy" width="1280"/>
+                <img src="eeb76f8b5d8011d8b33e53aca24f0b6e73e1976f4f3d330e2d0e61bfe9048374.png" title=" Is the home page" width="1280"/>
+                <img src="4c4e3afbbb86eaf6ad5e636c539509e28ca6b1c2d0a18863dfce045e5fe9c704.png" title=" Looks for: hyperx alloy" width="1280"/>
+                <img src="4c4e3afbbb86eaf6ad5e636c539509e28ca6b1c2d0a18863dfce045e5fe9c704.png" title=" Enters: hyperx alloy" width="1280"/>
+                <img src="4c4e3afbbb86eaf6ad5e636c539509e28ca6b1c2d0a18863dfce045e5fe9c704.png" title=" Starts search" width="1280"/>
+                <img src="9449433ede5da1da6fdbafd4c9823177719346dba8c9c6d54d7f70d3f5761894.png" title=" Starts search (completed)" width="1280"/>
+                <img src="9449433ede5da1da6fdbafd4c9823177719346dba8c9c6d54d7f70d3f5761894.png" title=" Looks for: hyperx alloy (completed)" width="1280"/>
+                <img src="c9b0c69942137e32e99826085776dcd53b7a76420e3ad4259a6d3a7dcfc8d64d.png" title=" Filter in stock" width="1280"/>
+                <img src="ff115440ef3dc0fb16e7c66d5e8b8855674f78e64f6e9fa7431cf5dd3d49cd25.png" title=" Should see product name: hyperx alloy" width="1280"/>
+                <img src="2597c31fc3dfe9ed63e55004c3af44d809ef6fabde6f00308de0e617583852f0.png" title=" Search for keyboards msi vigor gk50 elite" width="1280"/>
+                <img src="2597c31fc3dfe9ed63e55004c3af44d809ef6fabde6f00308de0e617583852f0.png" title=" Is the home page" width="1280"/>
+                <img src="6d86adaa7d6941b7d96a0120c8c6503e440a2c148a9f5a40c652c7a3dd72dfd8.png" title=" Looks for: msi vigor gk50 elite" width="1280"/>
+                <img src="6d86adaa7d6941b7d96a0120c8c6503e440a2c148a9f5a40c652c7a3dd72dfd8.png" title=" Enters: msi vigor gk50 elite" width="1280"/>
+                <img src="6d86adaa7d6941b7d96a0120c8c6503e440a2c148a9f5a40c652c7a3dd72dfd8.png" title=" Starts search" width="1280"/>
+                <img src="c7fdcec39230ceb9b570bc9c2a3e12f8fb3a892989dbf8c27d4612ceb15de5fc.png" title=" Starts search (completed)" width="1280"/>
+                <img src="c7fdcec39230ceb9b570bc9c2a3e12f8fb3a892989dbf8c27d4612ceb15de5fc.png" title=" Looks for: msi vigor gk50 elite (completed)" width="1280"/>
+                <img src="2dffb8155b22a929ea094f6dabb3cd306c439154d6580043a4e93e130bdd4ae8.png" title=" Filter in stock" width="1280"/>
+                <img src="6c01b9a87487ef86682fab86b7181a71292d886b7a3a77ec90a6e2d970a0cee5.png" title=" Should see product name: msi vigor gk50 elite" width="1280"/>
+                <img src="113ddbd7f95a458e60372e9bf9c890e58e56967c21494cff26993f8a68092a7f.png" title=" Search for keyboards Invalid keyboard" width="1280"/>
+                <img src="113ddbd7f95a458e60372e9bf9c890e58e56967c21494cff26993f8a68092a7f.png" title=" Is the home page" width="1280"/>
+                <img src="517fa2ada3f0d65427672b4c01a3b9f0b7a1b231bcdaac041ea7580f30de873e.png" title=" Looks for: Invalid keyboard" width="1280"/>
+                <img src="517fa2ada3f0d65427672b4c01a3b9f0b7a1b231bcdaac041ea7580f30de873e.png" title=" Enters: Invalid keyboard" width="1280"/>
+                <img src="517fa2ada3f0d65427672b4c01a3b9f0b7a1b231bcdaac041ea7580f30de873e.png" title=" Starts search" width="1280"/>
+                <img src="6c1bb8ad131bbb04357b032588870223e9d6b893f9f91dd000930420fb2ed0dc.png" title=" Starts search (completed)" width="1280"/>
+                <img src="6c1bb8ad131bbb04357b032588870223e9d6b893f9f91dd000930420fb2ed0dc.png" title=" Looks for: Invalid keyboard (completed)" width="1280"/>
+                <img src="05c71b562fdaaba301c4eccc54c67057011d50acd11b20a7a35284769941f75e.png" title=" Filter in stock: <span class='failing-color'>FAILURE</span>" width="1280"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.3.2</span>
+</div>
+</body>
+</html>
